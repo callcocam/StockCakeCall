@@ -9,3 +9,15 @@ The recommended way to install composer packages is:
 ```
 composer require caltj/stock-cake-call
 ```
+```
+Update your config/bootstrap.php.
+```
+```
+Plugin::load('Stock', ['bootstrap' => false, 'routes' => true]);
+```
+```
+Run migrations
+```
+```
+bin/cake migrations migrate --plugin Stock
+```
