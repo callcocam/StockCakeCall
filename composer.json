@@ -1,5 +1,5 @@
 {
-    "name": "caltj/StockCakeCall",
+    "name": "caltj/stock-cake-call",
     "description": "Stock plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
