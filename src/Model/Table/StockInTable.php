@@ -41,7 +41,7 @@ class StockInTable extends Table
         $this->addBehavior('Timestamp');
         $this->addBehavior('Stock.StockManager');
 
-        $this->belongsTo('Products', [
+        $this->belongsTo('Stock.Products', [
             'foreignKey' => 'product_id',
             'joinType' => 'INNER'
         ]);

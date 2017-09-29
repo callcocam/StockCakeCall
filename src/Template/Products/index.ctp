@@ -30,11 +30,11 @@
                     </thead>
                     <tbody>
                         <?php foreach ($products as $product): ?>
-                        <tr class="<?php echo $this->StockStatus->status($product->stock->quantity, $product->alert_quantity);?>">
+                        <tr class="<?php echo $this->StockStatus->status($product->stock->quantity ?? 0, $product->alert_quantity);?>">
                                         <td><?= $this->Number->format($product->id) ?></td>
                                         <td><?= h($product->title) ?></td>
                                         <td><?= $this->Number->format($product->price) ?></td>
-                                        <td><?= $this->Number->format($product->stock->quantity) ?></td>
+                                        <td><?= $this->Number->format($product->stock->quantity ?? 0) ?></td>
                                         <td><?= $this->Number->format($product->alert_quantity) ?></td>
                                         <td><?= h($product->created) ?></td>
                                         <td class="actions" style="white-space:nowrap">

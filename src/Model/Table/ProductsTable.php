@@ -54,7 +54,7 @@ class ProductsTable extends Table
         $this->hasMany('Stock.StockOut', [
             'foreignKey' => 'product_id'
         ]);
-        $this->belongsToMany('Categories', [
+        $this->belongsToMany('Stock.Categories', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'category_id',
             'joinTable' => 'categories_products'
